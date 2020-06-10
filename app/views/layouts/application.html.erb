@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gustaf Holmberg</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% 'Photo by Luis Dalvan from Pexels' %>
+
+</head>
+
+  <body>
+    <div class="bg-cover bg-fixed bg-center w-screen h-full shadow mx-auto">
+      <div class="image-background w-full h-full"></div>
+      <%= render 'layouts/navbar' %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
