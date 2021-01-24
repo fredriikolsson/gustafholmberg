@@ -1,20 +1,18 @@
-html{
-  background: url('../../assets/images/background.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .text-grey {
-  color: #898989;
+  color: #dfdfdf;
   transition: color 0.5s;
 }
 
-.text-grey:hover {
-  color: #A0A0A0;
+.first-overlay-image {
+  background-image: linear-gradient(rgba($primary, 0.25),
+                                    rgba($primary, 0.25)),
+                    url("../images/first.jpg");
+  @apply bg-cover w-full h-screen;
+}
+
+.second-overlay-image {
+  background-image: linear-gradient(rgba($primary, 0.25),
+                                    rgba($primary, 0.25)),
+                    url("../images/second.jpg");
+  @apply bg-cover w-full h-screen;
 }
