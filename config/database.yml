@@ -14,11 +14,15 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
+# For details on connection pooling, see Rails configuration guide
+# https://guides.rubyonrails.org/configuring.html#database-pooling
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see Rails configuration guide
-  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  port: 5432
+  host: <%= ENV['DATA_DB_HOST'] || ENV['POSTGRES_HOST'] %>
+  username: <%= ENV['DATA_DB_USER'] || ENV['POSTGRES_USER'] %>
+  password: <%= ENV['DATA_DB_PASS'] || ENV['POSTGRES_PASSWORD']%>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
