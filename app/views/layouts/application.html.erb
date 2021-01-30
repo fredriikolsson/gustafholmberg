@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full bg-primary">
   <head>
     <title>Gustaf Holmberg</title>
     <%= csrf_meta_tags %>
@@ -12,9 +12,14 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <div class='flex flex-col'>
-      <%= yield %>
+    <div class='flex flex-col min-h-full'>
+      <div class="flex-1">
+        <%= yield %>
+      </div>
+
+      <div class="flex-shrink-0">
+        <%= render 'layouts/footer' %>
+      </div>
     </div>
-    <%= render 'layouts/footer' %>
   </body>
 </html>

@@ -1,19 +1,26 @@
-<section class="h-full">
-  <div class="flex flex-col w-full md:flex-row">
-    <div class="flex hidden md:block md:w-1/3">
+<section class="h-full bg-white">
+  <div class="flex flex-col w-full lg:flex-row">
+    <div class="flex hidden lg:block lg:w-1/3">
       <div class="second-overlay-image"></div>
     </div>
 
-    <div class="flex flex-col items-center justify-center py-24 md:w-2/3 md:py-0">
+    <div class="flex flex-col items-center justify-center py-24 lg:w-2/3 lg:py-0">
       <div class="flex flex-col m-8 lg:m-24">
-        <h1 class="mb-4 text-5xl font-semibold">My passion is music.</h1>
-        <span class="text-sm font-light text-gray-500 ">
-          Pellentesque cursus et urna et tincidunt. Vestibulum tincidunt convallis varius. Maecenas non viverra enim, id elementum nunc. Donec quis orci eleifend, viverra nunc in, semper nulla. Morbi blandit nec ipsum sed imperdiet. Duis ipsum lacus, posuere sed euismod non, condimentum a ligula. Maecenas cursus vulputate nulla et luctus.
+        <span class="text-2xl font-light text-gray-600 lg:text-lg">
+          A few years back, I was staying in Edinburgh in search for any kind of inspiration. I found out about folk musician Nick Drake, and started researching his entire life. I immediately fell in love with his music. The combination of simplicity and odd alternate tunings has inspired me greatly through my own musical experience. I owe him everything.
         </span>
+      </div>
+
+      <div class="flex flex-row justify-around w-5/6">
+        <div class="flex">
+          <%= link_to 'https://open.spotify.com/artist/50w8FgjuzCUw1EAec102Nk?si=4pMkOnjaQAa7Ej2CGRLKzA' do %>
+            <%= image_pack_tag('spotify.svg', class: 'w-16 h-16') %>
+          <% end %>
+        </div>
       </div>
     </div>
 
-    <div class="flex block md:hidden md:w-1/3">
+    <div class="flex block lg:hidden lg:w-1/3">
       <div class="second-overlay-image"></div>
     </div>
   </div>

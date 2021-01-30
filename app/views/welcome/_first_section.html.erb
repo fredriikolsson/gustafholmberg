@@ -1,29 +1,20 @@
 <section class="h-full bg-primary">
-  <div class="flex flex-col w-full md:h-screen md:flex-row bg-primary">
-    <div class="flex flex-col items-center justify-center py-24 md:w-2/3 md:py-0">
-      <div class="flex flex-col m-8 lg:m-24">
-        <h1 class="mb-4 text-5xl font-semibold">My passion is music.</h1>
-        <span class="text-sm font-light text-gray-500 ">
-          Pellentesque cursus et urna et tincidunt. Vestibulum tincidunt convallis varius. Maecenas non viverra enim, id elementum nunc. Donec quis orci eleifend, viverra nunc in, semper nulla. Morbi blandit nec ipsum sed imperdiet. Duis ipsum lacus, posuere sed euismod non, condimentum a ligula. Maecenas cursus vulputate nulla et luctus.
-        </span>
-      </div>
-
-      <div class="flex flex-row justify-around w-5/6">
-        <div class="flex">
-          <%= link_to 'https://open.spotify.com/artist/50w8FgjuzCUw1EAec102Nk?si=4pMkOnjaQAa7Ej2CGRLKzA' do %>
-            <%= image_pack_tag('spotify.svg', class: 'w-16 h-16') %>
-          <% end %>
+  <div class="flex flex-col w-full lg:h-screen lg:flex-row bg-primary">
+    <div class="flex flex-col items-center justify-center pt-0 pb-24 align-middle lg:w-2/3 lg:pt-36 lg:pb-0">
+      <div class="flex flex-col items-center m-8 lg:mx-24">
+        <div class="w-11/12 video-wrapper">
+          <iframe class="shadow-xs" src="https://www.youtube.com/embed/KwhTpEWboJ4" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <div class="flex">
-          <%= link_to 'https://soundcloud.com/hankjrz' do %>
-            <%= image_pack_tag('soundcloud.svg', class: 'w-16 h-16') %>
-          <% end %>
+        <div class="flex-1 my-8">
+          <span class="text-2xl font-light text-gray-600 lg:text-lg">
+            Wandering through the dreamy forests and the wide open fields of my home town is where I find my inspiration to write. Growing up in Sweden, I have learnt the importance of nature and believe it to be an integral part of mankind's well-being. I see my music as a dedication to mother earth and everything she offers us mere morals.
+          </span>
         </div>
       </div>
     </div>
 
-    <div class="flex w-full md:w-1/3">
+    <div class="flex w-full lg:w-1/3">
       <div class="first-overlay-image"></div>
     </div>
   </div>
