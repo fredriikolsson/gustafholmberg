@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="115.683" height="148.485" viewBox="0 0 115.683 148.485">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 115.683 148.485">
   <defs>
     <style>
       .cls-1 {
-        fill: black;
+        fill: #4A5568;
         font-size: 92px;
         font-family: 'Gill Sans', QanelasSoftDEMO-UltraLight, Qanelas Soft DEMO;
         font-weight: 100;
@@ -11,6 +11,6 @@
   </defs>
   <g id="Group_1" data-name="Group 1" transform="translate(-32 -56)">
     <text id="G" class="cls-1" transform="translate(65 143)"><tspan x="-37.26" y="0">G</tspan></text>
-    <text id="H" class="cls-1" transform="translate(105.5 182.485)"><tspan x="-29.302" y="0">H</tspan></text>
+    <text id="H" class="cls-1" transform="translate(105.75 182.485)"><tspan x="-29.302" y="0">H</tspan></text>
   </g>
 </svg>
