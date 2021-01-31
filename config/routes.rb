@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   resource :welcome, only: :show
   resource :about, only: :show, controller: 'about'
+  resource :contact, only: :show, controller: 'contact'
 end

@@ -2,11 +2,6 @@ html body {
   height: 100%;
 }
 
-.text-grey {
-  color: $grey;
-  transition: color 0.5s;
-}
-
 .first-overlay-image {
   @apply bg-cover w-full h-screen;
   background-image: linear-gradient(rgba($primary, 0.25),
@@ -21,6 +16,26 @@ html body {
                     url("../images/second.jpg");
 }
 
+.about-image {
+  @apply w-full bg-contain bg-no-repeat bg-center;
+  @extend .img-fluid;
+
+  height: 512px;
+  background-image: linear-gradient(rgba($primary, 0.25),
+                                    rgba($primary, 0.25)),
+                    url("../images/walking_in_nature.jpg");
+}
+
+.contact-image {
+  @apply w-full bg-contain bg-no-repeat bg-center;
+  @extend .img-fluid;
+
+  height: 512px;
+  background-image: linear-gradient(rgba($primary, 0.25),
+                                    rgba($primary, 0.25)),
+                    url("../images/guitar.jpg");
+}
+
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -32,5 +47,15 @@ html body {
     left: 0;
     width: 100%;
     height: 100%;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-image {
+    height: 512px;
   }
 }
