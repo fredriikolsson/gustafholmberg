@@ -54,6 +54,11 @@ group :development do
   gem 'rubocop-performance', '~> 1.9'
   gem 'rubocop-rails', '~> 2.9'
   gem 'rubocop-rspec', '~> 2.1'
+
+  gem 'capistrano', '~> 3.16', require: false
+  gem 'capistrano-passenger', '~> 0.2', require: false
+  gem 'capistrano-rails', '~> 1.6', require: false
+  gem 'capistrano-rbenv', '~> 2.2', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
