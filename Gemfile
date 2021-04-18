@@ -6,7 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.1'
+gem 'rails', '~> 6.1.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -36,9 +36,9 @@ gem 'font-awesome-sass', '~> 5.15.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry-byebug'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'pry-byebug'
   gem 'rspec-rails', '~> 4.0'
 end
 
@@ -54,6 +54,11 @@ group :development do
   gem 'rubocop-performance', '~> 1.9'
   gem 'rubocop-rails', '~> 2.9'
   gem 'rubocop-rspec', '~> 2.1'
+
+  gem 'capistrano', '~> 3.16', require: false
+  gem 'capistrano-passenger', '~> 0.2', require: false
+  gem 'capistrano-rails', '~> 1.6', require: false
+  gem 'capistrano-rbenv', '~> 2.2', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
