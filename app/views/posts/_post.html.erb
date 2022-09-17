@@ -1,0 +1,18 @@
+<div id="<%= dom_id post %>" class="border rounded-lg bg-white shadow-sm m-4 p-4">
+  <p class="mb-5">
+    <strong class="block text-slate-700 text-2xl font-medium mb-1">
+      <%= post.title %>
+    </strong>
+    <em><%= localize(post.created_at, format: :short) %></em>
+  </p>
+
+  <p class="my-5">
+    <%= post.body %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this post", post, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this post', edit_post_path(post), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
