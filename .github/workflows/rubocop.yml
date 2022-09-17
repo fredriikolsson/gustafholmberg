@@ -1,0 +1,26 @@
+name: Rubocop
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby version (using project .ruby-version)
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true
+
+    - name: Install PostgreSQL client for pg-gem
+      run: sudo apt-get -yqq install libpq-dev
+
+    - name: Bundle install
+      run: |
+        gem install bundler
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+
+    - name: Run rubocop
+      run: bundle exec rubocop -ESP
