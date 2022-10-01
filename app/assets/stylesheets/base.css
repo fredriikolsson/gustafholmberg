@@ -55,21 +55,6 @@ html body {
   height: 100%;
 }
 
-.first-overlay-image {
-  @apply bg-cover w-full h-screen;
-  background-image: linear-gradient(rgba(var(--primary), 0.25), rgba(var(--primary), 0.25)), asset_url('first.jpg');
-}
-
-.contact-image {
-  @apply w-full bg-contain bg-no-repeat bg-center;
-  @extend .img-fluid;
-
-  height: 512px;
-  background-image: linear-gradient(rgba(var(--primary), 0.25),
-                                    rgba(var(--primary), 0.25)),
-                    url("../../images/guitar.jpg");
-}
-
 .img-fluid {
   max-width: 100%;
 }
