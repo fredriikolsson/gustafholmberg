@@ -13,9 +13,9 @@ module.exports = {
         primary: 'var(--primary)'
       },
       backgroundImage: {
-        'first-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('/first.jpg')",
-        'second-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('/second.jpg')",
-        'about-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('/walking_in_nature.jpg')",
+        'first-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('first.jpg')",
+        'second-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('second.jpg')",
+        'about-image': "linear-gradient(rgba(234, 239, 240, 0.25), rgba(234, 239, 240, 0.25)), url('walking_in_nature.jpg')",
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

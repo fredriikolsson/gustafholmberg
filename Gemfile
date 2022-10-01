@@ -8,8 +8,11 @@ ruby '3.1.1'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4'
 
-# The modern asset pipeline for Rails [https://github.com/rails/propshaft]
-gem 'propshaft'
+# Sprockets is a Rack-based asset packaging system that concatenates and serves
+# JavaScript, CoffeeScript, CSS, Sass, and SCSS.
+gem 'sprockets', '4.1.1'
+# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
@@ -46,6 +49,8 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+
+gem 'image_processing', '1.12.2'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
