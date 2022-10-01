@@ -1,0 +1,86 @@
+@layer components {
+  .btn-primary {
+    @apply rounded-lg py-3 px-5 inline-block font-medium bg-green-200;
+  }
+
+  .btn-info {
+    @apply rounded-lg py-3 px-5 inline-block font-medium bg-blue-200;
+  }
+
+  .btn-red{
+    background-color: red;
+
+    &:hover {
+      @apply bg-blue-900;
+    }
+  }
+}
+
+/* Colors */
+@layer base {
+  :root {
+    --primary: #E9EFF0;
+    --grey: #dfdfdf;
+  }
+}
+*
+* {
+  @apply text-gray-600;
+  font-family: Poppins, Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-gray-900;
+  font-style: bold;
+  font-family: Cabin, Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.text-grey {
+  color: var(--grey);
+  transition: color 0.5s;
+}
+
+a {
+  &:hover {
+    @apply text-blue-600
+  }
+}
+
+.paragraph {
+  @apply my-4;
+}
+
+/* Base */
+html body {
+  height: 100%;
+}
+
+.first-overlay-image {
+  @apply bg-cover w-full h-screen;
+  background-image: linear-gradient(rgba(var(--primary), 0.25), rgba(var(--primary), 0.25)), asset_url('first.jpg');
+}
+
+.contact-image {
+  @apply w-full bg-contain bg-no-repeat bg-center;
+  @extend .img-fluid;
+
+  height: 512px;
+  background-image: linear-gradient(rgba(var(--primary), 0.25),
+                                    rgba(var(--primary), 0.25)),
+                    url("../../images/guitar.jpg");
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .about-image {
+    height: 512px;
+  }
+}
+
+/* Navbar */
+.navbar-item {
+  @extend .text-grey;
+}
