@@ -1,6 +1,37 @@
 version: '3.9'
 
+x-rails: &rails-defaults
+  platform: linux/x86_64
+  build:
+    context: .
+  depends_on:
+    - postgres
+  volumes:
+    - .:/app
+    - storage:/app/storage
+    - tmp:/app/tmp
+  environment: &rails-environment
+    POSTGRES_HOST: postgres
+    POSTGRES_USER: postgres
+    POSTGRES_PASSWORD: docker
+    RAILS_ENV: development
+    WEB_CONCURRENCY: 1
+  tmpfs:
+    - /app/log
+    - /app/tmp/storage
+
 services:
+  web:
+    <<: *rails-defaults
+    ports:
+      - '3000:3000'
+
+  tailwind:
+    <<: *rails-defaults
+    environment:
+      <<: *rails-environment
+    command: bin/rails tailwindcss:watch
+
   postgres:
     image: postgres:alpine
     volumes:
@@ -13,3 +44,5 @@ services:
 
 volumes:
   postgres:
+  tmp:
+  storage:
