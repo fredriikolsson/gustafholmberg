@@ -30,4 +30,10 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  posts:
+    create:
+      notice: Post was successfully created.
+    update:
+      notice: Post was successfully updated.
+    destroy:
+      notice: Post was successfully destroyed.
