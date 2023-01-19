@@ -35,6 +35,9 @@ gem 'tailwindcss-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+# Flexible authentication solution for Rails with Warden
+gem 'devise', '4.8.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -79,7 +82,7 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
   gem 'rspec'
-  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rspec-rails', '~> 6.0.0'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
