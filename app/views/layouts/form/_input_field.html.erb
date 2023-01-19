@@ -1,0 +1,8 @@
+<% show_label = local_assigns.fetch(:show_label, true) %>
+<% options = local_assigns.fetch(:options, {}) %>
+<% options[:class] = "#{options[:class]} rounded" %>
+
+<div class="flex flex-col">
+  <%= form.label(field, **options) if show_label%>
+  <%= form.send(input_type, field, **options) %>
+</div>

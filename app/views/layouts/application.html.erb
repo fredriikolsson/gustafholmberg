@@ -13,9 +13,9 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/flashes' %>
 
     <div class='flex flex-col min-h-full lg:pt-36 lg:px-12'>
+      <%= render 'layouts/flashes' %>
       <div class="flex-1">
         <%= yield %>
       </div>

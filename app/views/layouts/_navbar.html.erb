@@ -1,16 +1,23 @@
-<header class="text-gray-700 lg:bg-transparent bg-primary lg:absolute body-font">
-  <div class="flex flex-col flex-wrap items-center justify-center p-5 mx-auto lg:flex-row">
+<header class="text-gray-700 lg:bg-transparent bg-primary lg:absolute body-font w-full">
+  <div class="flex flex-col flex-wrap items-center p-5 mx-auto lg:flex-row">
     <%= link_to root_path, class: 'fill-current text-gray-700' do %>
       <%= image_tag 'gustaf-holmberg-logo.svg', class: 'fill-current w-24 h-24 text-gray-700' %>
     <% end %>
 
-    <nav class="flex flex-wrap items-center justify-center text-base lg:ml-4 lg:py-1 lg:pl-4">
-      <%= navbar_link 'Music', 'https://open.spotify.com/artist/50w8FgjuzCUw1EAec102Nk?si=4pMkOnjaQAa7Ej2CGRLKzA', target: :_blank %>
-      <%= navbar_link 'YouTube', 'https://www.youtube.com/channel/UCDnUVGCpaJXE-zcr8EYB-5w', target: :_blank %>
-      <%= navbar_link 'Instagram', 'https://www.instagram.com/gustafholmbergg/', target: :_blank %>
-      <%= navbar_link 'About', about_path %>
-      <%= navbar_link 'Contact', contact_path %>
-      <%= navbar_link 'News', posts_path %>
+    <nav class="flex flex-wrap items-center justify-between text-base lg:ml-4 lg:py-1 lg:pl-4 flex-grow">
+      <div>
+        <%= navbar_link 'Music', 'https://open.spotify.com/artist/50w8FgjuzCUw1EAec102Nk?si=4pMkOnjaQAa7Ej2CGRLKzA', target: :_blank %>
+        <%= navbar_link 'YouTube', 'https://www.youtube.com/channel/UCDnUVGCpaJXE-zcr8EYB-5w', target: :_blank %>
+        <%= navbar_link 'Instagram', 'https://www.instagram.com/gustafholmbergg/', target: :_blank %>
+        <%= navbar_link 'About', about_path %>
+        <%= navbar_link 'Contact', contact_path %>
+        <%= navbar_link 'News', posts_path %>
+      </div>
+
+      <div>
+        <%= navbar_link t('.login'), new_user_session_path unless user_signed_in? %>
+        <%= button_to t('.log_out'), destroy_user_session_path, method: :delete, class: 'block mx-5 hover:text-gray-900' if user_signed_in? %>
+      </div>
     </nav>
   </div>
 </header>
