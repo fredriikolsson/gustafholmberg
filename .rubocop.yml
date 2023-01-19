@@ -10,6 +10,7 @@ AllCops:
     - 'db/schema.rb'
     - 'vendor/bundle/**/*'
     - 'node_modules/**/*'
+    - 'config/initializers/devise.rb'
 
 Style/Documentation:
   Enabled: false
