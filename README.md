@@ -29,4 +29,9 @@ To both serve css and the server run
 
 * Deployment instructions
 
-* ...
+This application is run at [fly.io](https://fly.io).
+Deploy the application with
+
+```shell
+fly deploy
+```
