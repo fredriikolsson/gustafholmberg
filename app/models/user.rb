@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable, :rememberable, :validatable
+  devise :database_authenticatable, :rememberable, :validatable
 end
