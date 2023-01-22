@@ -38,6 +38,9 @@ gem 'jbuilder'
 # Flexible authentication solution for Rails with Warden
 gem 'devise', '4.8.1'
 
+# Object oriented authorization for Rails applications
+gem 'pundit', '2.3.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
