@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :post do
-    body { nil }
+    title { 'A string' }
   end
 end
